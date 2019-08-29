@@ -3,7 +3,7 @@
 const lilJerryTheCat = {
     name: "Lil Jerry",
     species: "Tabby/MainCoon",
-    nickName: "Jer Bear",
+    nickName: ["Jer Bear"],
     age: 7,
     meow: function () {   
         window.alert("MEOOOWWW!")
@@ -16,13 +16,13 @@ const lilJerryTheCat = {
     },
     favoriteToys: [],
     play: function (toy) {
-        if (toy =="bird") {
+        if (toy ==="bird") {
             this.favoriteToys.push(toy);
             console.log("bird");
-        } else if (toy == "bell") {
+        } else if (toy === "bell") {
             this.favoriteToys.push(toy);
             console.log("bell");
-        } else if (toy == "laser") {
+        } else if (toy === "laser") {
             this.favoriteToys.push(toy);
         } 
     }
@@ -53,3 +53,40 @@ lilJerryTheCat.sleeps();
 // play = function (item) {
     // this.favoriteToy.push(item)
 // }
+
+
+/* Bob's Burgers */
+
+const restaurant = {
+    name: "Bob's Burgers",
+    orders: [],
+    placeOrder: function (mealObj) {
+       this.orders.push(mealObj)
+    },
+    getAllOrders: function () {
+        return this.orders
+    }
+}
+const chickenComboMeal = {
+    sandwhichType: "chicken",
+    fries: true,
+    drinkSize: "medium"
+}
+const burgerComboMeal = {
+    sandwhichType: "burger",
+    fries: false,
+    drinkSize: "medium"
+}
+const veggieComboMeal = {
+    sandwhichType: "veggie",
+    fries: true,
+    drinkSize: "medium"
+}
+
+// Place an order
+restaurant.placeOrder();
+restaurant.getAllOrders();
+
+// Invoke the function to return the list of all orders
+
+// Output all orders to the console using console.table()
